@@ -11,5 +11,6 @@ In root directory
     composer install
     npm install
     php artisan migrate
+    php artisan storage:link
     npm run prod (optional, bundle is included)
     php artisan serve
