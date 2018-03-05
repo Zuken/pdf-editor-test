@@ -25,7 +25,7 @@ class PdfFileStore extends FormRequest
     {
         return [
             //
-            'file' => 'required'
+            'file' => 'required|mimes:pdf'
         ];
     }
 }
