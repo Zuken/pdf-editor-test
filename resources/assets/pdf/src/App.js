@@ -39,13 +39,11 @@ class App extends Component {
                 body
             });
             const {data} = await response.json();
-            console.log(data);
             if (data && data.id) {
-                const files = this.state.files;
-                files.push(data);
-                this.setState({files});
                 this.toggleAddForm();
+                this.loadFiles( this.state.page );
             }
+
         }
         catch (e) {
             this.showError("Failed to upload")
